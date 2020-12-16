@@ -30,9 +30,6 @@ Clear-PreviousBuild
 # building:
 
 Clear-PluginFromEngine $global:pluginName
-Clear-PluginFromEngine "HIDUE"
-Build-Plugin "HIDUE"
-Copy-Item -Path "$PSScriptRoot\__deploy\temp\HIDUE" -Destination "$pluginCopyTargetDir\HIDUE" -Force -Recurse
 
 Build-Plugin $global:pluginName
 Copy-Item -Path "$PSScriptRoot\__deploy\temp\$global:pluginName" -Destination "$pluginCopyTargetDir\$global:pluginName" -Force -Recurse
