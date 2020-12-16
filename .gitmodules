@@ -1,0 +1,4 @@
+[submodule "Plugins/SpaceMouse"]
+	path = Plugins/SpaceMouse
+	url = https://github.com/microdee/UE4-SpaceMouse.git
+	branch = topic/marketplace-compat
