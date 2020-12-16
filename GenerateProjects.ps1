@@ -1,5 +1,5 @@
 param (
-    [string] $ue4PathArg = "UE_4.25"
+    [string] $ue4PathArg = "UE_4.26"
 )
 
 # urgh wugly, ugly but barely works

@@ -13,8 +13,7 @@ $deployDir = "$(Get-Location)\deploy"
 
 Clear-OrCreate $deployDir
 
-.\DeployForVersion.ps1 "UE_4.21"
-.\DeployForVersion.ps1 "UE_4.22"
 .\DeployForVersion.ps1 "UE_4.23"
 .\DeployForVersion.ps1 "UE_4.24"
 .\DeployForVersion.ps1 "UE_4.25"
+.\DeployForVersion.ps1 "UE_4.26"
