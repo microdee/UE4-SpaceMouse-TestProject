@@ -1,4 +1,4 @@
-$global:pluginVersion = "1.0.2"
+$global:pluginVersion = "1.1.0"
 $global:pluginName = "SpaceMouse"
 $global:testProjectName = "SpaceMouseTest"
 
@@ -224,6 +224,8 @@ function Build-Plugin {
     
     Write-Section "PACKAGING $PluginName $global:pluginVersion"
 
+    $pluginPath = "$PSScriptRoot\Plugins\$PluginName\$PluginName.uplugin"
+
     $enginePluginPath = "$global:ue4Path\Engine\Plugins\Marketplace\$PluginName";
     $packagedOutputPath = "$PSScriptRoot\__deploy\temp\$PluginName";
     
@@ -235,7 +237,7 @@ function Build-Plugin {
     $ue4At = "$global:ue4Path\Engine\Binaries\DotNET\AutomationTool.exe"
     $ue4AtArgs = `
         "BuildPlugin", `
-        "-Plugin=`"$PSScriptRoot\Plugins\$PluginName\$PluginName.uplugin`"", `
+        "-Plugin=`"$pluginPath`"", `
         "-Package=`"$packagedOutputPath`"", `
         "-CreateSubFolder"
     
