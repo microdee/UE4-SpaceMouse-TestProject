@@ -15,3 +15,6 @@ Saved
 *.log
 /__deploy
 /deploy
+/Nuke.Targets/bin
+/Nuke.Targets/obj
+/build/clang_tidy

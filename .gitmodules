@@ -2,3 +2,6 @@
 	path = Plugins/SpaceMouse
 	url = https://github.com/microdee/UE4-SpaceMouse.git
 	branch = topic/marketplace-compat
+[submodule "Nuke.Unreal"]
+	path = Nuke.Unreal
+	url = https://github.com/microdee/Nuke.Unreal.git
