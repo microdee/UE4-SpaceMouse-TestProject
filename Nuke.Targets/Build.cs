@@ -22,7 +22,7 @@ class Build : PluginTargets
     ///   - Microsoft VisualStudio     https://nuke.build/visualstudio
     ///   - Microsoft VSCode           https://nuke.build/vscode
 
-    public static int Main() => Execute<Build>(x => x.TestTarget);
+    public static int Main() => Execute<Build>(x => x.BuildEditor);
 
     [Solution] readonly Solution Solution;
     
