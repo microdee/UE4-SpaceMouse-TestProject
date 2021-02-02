@@ -1,19 +1,5 @@
 
-$global:ue4Path = ""
-Import-Module .\ProjectModule.psm1
-
-if(Test-EnvironmentVariable "CI_BUILD_REF_SLUG") {
-    "This script is running in a Gitlab CI/CD environment. It should immediately exit on error."
-} else {
-    "This script is assumed to be running attended."
-}
-
-$pluginCopyTargetDir = "$(Get-Location)\__deploy\$ue4PathArg"
-$deployDir = "$(Get-Location)\deploy"
-
-Clear-OrCreate $deployDir
-
-.\DeployForVersion.ps1 "UE_4.23"
-.\DeployForVersion.ps1 "UE_4.24"
-.\DeployForVersion.ps1 "UE_4.25"
-.\DeployForVersion.ps1 "UE_4.26"
+.\build.cmd --target CleanDeployment --no-logo
+.\build.cmd --target MakeMarketplaceRelease --unreal-version 4.24.3 --no-logo
+.\build.cmd --target MakeMarketplaceRelease --unreal-version 4.25.4 --no-logo
+.\build.cmd --target MakeMarketplaceRelease --unreal-version 4.26.0 --no-logo
