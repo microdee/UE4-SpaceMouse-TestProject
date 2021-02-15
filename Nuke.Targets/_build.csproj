@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Nuke.Unreal\Nuke.Unreal.csproj" />
+    <ProjectReference Include="..\Nuke.Unreal\src\Nuke.Unreal\Nuke.Unreal.csproj" />
   </ItemGroup>
 
 </Project>
