@@ -28,16 +28,9 @@ class Build : PluginTargets
     
     public override string UnrealVersion { get; set; } = "4.26.0";
     
-    public override string PluginVersion => "1.1.2";
+    public override string PluginVersion => "1.1.4";
 
     public override AbsolutePath ToPlugin => UnrealPluginsFolder / "SpaceMouse" / "SpaceMouse.uplugin";
 
     public override AbsolutePath ToProject => RootDirectory / "SpaceMouseTest.uproject";
-
-    public Target TestTarget => _ => _
-        .DependsOn(OtherTestTarget)
-        .Executes(() => Info("Yay this is seemingly working"));
-
-    public Target OtherTestTarget => _ => _
-        .Executes(() => Info("Another target"));
 }
