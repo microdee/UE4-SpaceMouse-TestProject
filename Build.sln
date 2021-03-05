@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_build", "Nuke.Targets\_bui
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Nuke.Targets", "Nuke.Targets", "{499EDF64-7DB8-416A-9168-B6C153309050}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nuke.Unreal", "Nuke.Unreal\Nuke.Unreal.csproj", "{F8E6C028-AB11-4829-A9F5-0C3C325234D0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nuke.Unreal", "Nuke.Unreal\src\Nuke.Unreal\Nuke.Unreal.csproj", "{F8E6C028-AB11-4829-A9F5-0C3C325234D0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
