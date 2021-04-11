@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "_build": {
+      "commandName": "Project",
+      "commandLineArgs": "--target NewModule --name TestModule",
+      "workingDirectory": "C:\\projects\\personal\\SpaceMouseTest\\Source"
+    }
+  }
+}
