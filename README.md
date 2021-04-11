@@ -42,33 +42,16 @@ To prepare a marketplace compliant release add `--for-marketplace` argument.
 
 Resulting archives are placed in `/.deploy` folder by default.
 
-### Troubleshooting
+### Building with custom engine
 
-**If Nuke complains about not finding your Unreal engine folder, then**
-
-1. Open `/Nuke.Targets/Build.cs`
-2. In the `Build` class replace the line:
-```CSharp
-public static int Main() => Execute<Build>(x => x.BuildEditor);
-```
-with
-```CSharp
-public static int Main()
-{
-    Unreal.EngineSearchPaths.Add((AbsolutePath) @"C:\My\Special\Path");
-    return Execute<Build>(x => x.BuildEditor);
-}
-```
-3. **NOTE** that the path you provide should be the parent path to your Unreal engine versions (typically they're in a folder like UE_4.26)
-
-If for any ungodly reason the actual folder of your Unreal Engine installation doesn't look like UE_4.26 (`UE_{major}.{minor}`) you can provide a new format as an argument:
+Using a custom instance of Unreal Engine maybe built from source:
 
 ```
-nuke MakeRelease --unreal-subfolder MySpecialUE_{0}.{1}
+nuke MakeRelease --custom-engine-path C:\Path\To\MyCustomEngine
 ```
 
 or if you want to make that permanent you can edit the `Build` class in `/Nuke.Targets/Build.cs` by adding
 
 ```CSharp
-public override string UnrealSubFolder => "MySpecialUE_{0}.{1}"
+public override AbsolutePath CustomEnginePath { get; set; } = RootDirectory.Parent / "MyCustomEngine"
 ```
