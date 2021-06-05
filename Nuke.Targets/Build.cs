@@ -26,9 +26,9 @@ class Build : PluginTargets
 
     [Solution] readonly Solution Solution;
     
-    public override string UnrealVersion { get; set; } = "4.26.0";
+    public override string UnrealVersion { get; set; } = "4.26.2";
     
-    public override string PluginVersion => "1.2.3";
+    public override string PluginVersion => "1.2.4";
 
     public override AbsolutePath ToPlugin => UnrealPluginsFolder / "SpaceMouse" / "SpaceMouse.uplugin";
 
