@@ -14,7 +14,7 @@ using static Nuke.Common.IO.PathConstruction;
 using static Nuke.Common.Logger;
 
 [CheckBuildProjectConfigurations]
-class Build : PluginTargets
+partial class Build : PluginTargets
 {
     /// Support plugins are available for:
     ///   - JetBrains ReSharper        https://nuke.build/resharper
