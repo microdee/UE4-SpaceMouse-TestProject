@@ -216,6 +216,7 @@ partial class Build : PluginTargets
     };
 
     public Target GenerateRuntimeNavlibInterface => _ => _
+        .Unlisted()
         .Executes(() => {
             var smRuntimeDir = ToPlugin.Parent / "Source" / "SpaceMouseRuntime";
             var headerInputPath = smRuntimeDir / "Public" / "SmNavContext.sbnh";
