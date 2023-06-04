@@ -17,4 +17,6 @@ class Build : UnrealBuild, IPluginTargets
     public static int Main () => Execute<Build>(x => x.Generate);
     protected override void OnBuildCreated() => NoLogo = true;
     public string PluginVersion => "1.2.6";
+
+    public override AbsolutePath Output => RootDirectory / ".deploy";
 }
