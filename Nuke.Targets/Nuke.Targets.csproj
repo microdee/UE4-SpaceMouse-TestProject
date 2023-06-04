@@ -11,7 +11,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="md.Nuke.Unreal" Version="1.2.5" />
+    <PackageReference Include="md.Nuke.Unreal" Version="1.2.7" />
     <PackageReference Include="Nuke.Common" Version="7.0.2" />
   </ItemGroup>
 

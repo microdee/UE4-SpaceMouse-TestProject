@@ -1,7 +1,7 @@
 {
 	"FileVersion": 3,
-	"EngineAssociation": "5.0",
-	"EngineVersionPatch": "5.0.3",
+	"EngineAssociation": "5.2",
+	"EngineVersionPatch": "5.2.0",
 	"Category": "",
 	"Description": "",
 	"Modules": [
