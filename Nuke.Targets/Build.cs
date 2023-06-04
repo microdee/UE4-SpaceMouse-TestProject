@@ -8,6 +8,7 @@ using Nuke.Common.ProjectModel;
 using Nuke.Common.Tooling;
 using Nuke.Common.Utilities.Collections;
 using Nuke.Unreal;
+using Nuke.Unreal.Tools;
 using static Nuke.Common.EnvironmentInfo;
 using static Nuke.Common.IO.FileSystemTasks;
 using static Nuke.Common.IO.PathConstruction;
@@ -19,4 +20,13 @@ class Build : UnrealBuild, IPluginTargets
     public string PluginVersion => "1.2.6";
 
     public override AbsolutePath Output => RootDirectory / ".deploy";
+
+    public UatConfig UatPackPlugin(UatConfig _) => PluginTargets.Default.UatPackPlugin(_)
+        .BuildPlugin(_ => _
+            .NoHostPlatform()
+            .TargetPlatforms("Win64")
+            .If(GetEngineVersionFromProject().SemanticalVersion.Major < 5, _ => _
+                .VS2019()
+            )
+        );
 }
