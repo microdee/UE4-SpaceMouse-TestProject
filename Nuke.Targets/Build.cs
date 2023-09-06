@@ -1,5 +1,6 @@
 using System;
 using System.Linq;
+using Nuke.Cola.BuildPlugins;
 using Nuke.Common;
 using Nuke.Common.CI;
 using Nuke.Common.Execution;
@@ -17,16 +18,7 @@ class Build : UnrealBuild, IPluginTargets
 {
     public static int Main () => Execute<Build>(x => x.Generate);
     protected override void OnBuildCreated() => NoLogo = true;
-    public string PluginVersion => "1.2.6";
+    public string PluginVersion => "1.2.9";
 
-    public override AbsolutePath Output => RootDirectory / ".deploy";
-
-    public UatConfig UatPackPlugin(UatConfig _) => PluginTargets.Default.UatPackPlugin(_)
-        .BuildPlugin(_ => _
-            .NoHostPlatform()
-            .TargetPlatforms("Win64")
-            .If(GetEngineVersionFromProject().SemanticalVersion.Major < 5, _ => _
-                .VS2019()
-            )
-        );
+    public override AbsolutePath GetOutput() => RootDirectory / ".deploy";
 }
