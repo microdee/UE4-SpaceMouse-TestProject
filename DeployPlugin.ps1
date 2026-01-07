@@ -1,7 +1,6 @@
 
-.\build.cmd CleanDeployment
-.\build.cmd MakeRelease --unreal-version 4.27.2
-.\build.cmd MakeRelease --for-marketplace --unreal-version 5.0.3
-.\build.cmd MakeRelease --for-marketplace --unreal-version 5.1.1
-.\build.cmd MakeRelease --for-marketplace --unreal-version 5.2.1
-.\build.cmd MakeRelease --for-marketplace --unreal-version 5.3.0
+.\build.cmd switch --unreal 5.3; .\build.cmd BuildOuesm
+.\build.cmd switch --unreal 5.4; .\build.cmd BuildOuesm
+.\build.cmd switch --unreal 5.5; .\build.cmd BuildOuesm
+.\build.cmd switch --unreal 5.6; .\build.cmd BuildOuesm
+.\build.cmd switch --unreal 5.7; .\build.cmd BuildOuesm

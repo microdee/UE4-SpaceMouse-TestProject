@@ -1,7 +1,6 @@
 {
 	"FileVersion": 3,
-	"EngineAssociation": "5.3",
-	"EngineVersionPatch": "5.3.0",
+	"EngineAssociation": "5.4",
 	"Category": "",
 	"Description": "",
 	"Modules": [
@@ -38,11 +37,5 @@
 				"Linux"
 			]
 		}
-	],
-	"TargetPlatforms": [
-		"AllDesktop",
-		"LinuxNoEditor",
-		"MacNoEditor",
-		"WindowsNoEditor"
 	]
 }

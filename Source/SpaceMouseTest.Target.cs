@@ -9,6 +9,7 @@ public class SpaceMouseTestTarget : TargetRules
 	public SpaceMouseTestTarget(TargetInfo Target) : base(Target)
 	{
 		Type = TargetType.Game;
+		DefaultBuildSettings = BuildSettingsVersion.Latest;
 		ExtraModuleNames.AddRange( new string[] { "SpaceMouseTest" } );
 	}
 }
