@@ -1,24 +1,23 @@
 using System;
 using System.Linq;
-using Nuke.Cola.BuildPlugins;
-using Nuke.Common;
-using Nuke.Common.CI;
-using Nuke.Common.Execution;
-using Nuke.Common.IO;
-using Nuke.Common.ProjectModel;
-using Nuke.Common.Tooling;
-using Nuke.Common.Utilities.Collections;
 using Nuke.Unreal;
-using Nuke.Unreal.Tools;
-using static Nuke.Common.EnvironmentInfo;
-using static Nuke.Common.IO.FileSystemTasks;
-using static Nuke.Common.IO.PathConstruction;
+using Nuke.Common;
+using Nuke.Cola.BuildPlugins;
+using Serilog;
 
-class Build : UnrealBuild, IPluginTargets
+public class Build : UnrealBuild
+    , IPackageTargets   // Build component for packaged projects (delete if not needed)
+    , IAndroidTargets   // Build component for Android chores    (delete if not needed)
 {
-    public static int Main () => Execute<Build>(x => x.Generate);
-    protected override void OnBuildCreated() => NoLogo = true;
-    public string PluginVersion => "1.2.9";
+    /// Nuke:
+    /// Support plugins are available for:
+    ///   - JetBrains ReSharper        https://nuke.build/resharper
+    ///   - JetBrains Rider            https://nuke.build/rider
+    ///   - Microsoft VisualStudio     https://nuke.build/visualstudio
+    ///   - Microsoft VSCode           https://nuke.build/vscode
+    
+    // Uncomment to permanently disable the ASCII Nuke logo:
+    // protected override void OnBuildCreated() => NoLogo = true;
 
-    public override AbsolutePath GetOutput() => RootDirectory / ".deploy";
+    public static int Main() => Plugins.Execute<Build>(Execute);
 }
