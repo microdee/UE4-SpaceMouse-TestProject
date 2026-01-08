@@ -1,3 +1,6 @@
 [submodule "Plugins/OpenUnrealSpaceMouse"]
 	path = Plugins/OpenUnrealSpaceMouse
 	url = https://github.com/microdee/OpenUnrealSpaceMouse.git
+[submodule "Plugins/MCRO"]
+	path = Plugins/MCRO
+	url = https://github.com/microdee/mcro.git
