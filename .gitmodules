@@ -1,0 +1,3 @@
+[submodule "Plugins/OpenUnrealSpaceMouse"]
+	path = Plugins/OpenUnrealSpaceMouse
+	url = https://github.com/microdee/OpenUnrealSpaceMouse.git
