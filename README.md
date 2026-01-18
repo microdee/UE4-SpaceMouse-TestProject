@@ -1,3 +1,6 @@
+<img src="Docs/Images/SpacePro-Thumb-2.0-OnLight.png#gh-light-mode-only" />
+<img src="Docs/Images/SpacePro-Thumb-2.0-OnDark.png#gh-dark-mode-only" />
+
 ## Test project for OpenUnrealSpaceMouse
 
 # [Go to the plugin repository](https://github.com/microdee/OpenUnrealSpaceMouse)

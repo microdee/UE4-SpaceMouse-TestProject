@@ -1,4 +1,6 @@
-[submodule "Plugins/SpaceMouse"]
-	path = Plugins/SpaceMouse
-	url = https://github.com/microdee/UE4-SpaceMouse.git
-	branch = topic/marketplace-compat
+[submodule "Plugins/OpenUnrealSpaceMouse"]
+	path = Plugins/OpenUnrealSpaceMouse
+	url = https://github.com/microdee/OpenUnrealSpaceMouse.git
+[submodule "Plugins/MCRO"]
+	path = Plugins/MCRO
+	url = https://github.com/microdee/mcro.git
