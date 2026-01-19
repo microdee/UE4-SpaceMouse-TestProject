@@ -25,7 +25,7 @@ OpenUnrealSpaceMouse uses [Nuke](https://nuke.build) with [Nuke.Unreal](https://
 Clone this repository and follow above steps starting at step 2. To make a release do the following in a terminal:
 
 ```
-> nuke switch --unreal 5.7; nuke BuildOuesm
+nuke switch --unreal 5.7; nuke BuildOuesm
 ```
 
 Resulting archives are placed in `/.deploy` folder by default. Please refer to [Nuke.Unreal](https://mcro.de/Nuke.Unreal) documentation for more control and/or customization.
