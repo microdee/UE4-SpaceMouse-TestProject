@@ -14,7 +14,7 @@ OpenUnrealSpaceMouse uses [Nuke](https://nuke.build) with [Nuke.Unreal](https://
 1. Set up [Nuke.Unreal](https://mcro.de/Nuke.Unreal/d8/d51/GettingStarted.html) for your project
 2. Submodule https://github.com/microdee/mcro.git into the project `Plugins` folder
 3. Submodule https://github.com/microdee/OpenUnrealSpaceMouse.git into the project `Plugins` folder.
-   a. (or copy sources if you use Perforce)
+   * (or copy sources if you use Perforce)
 4. In a terminal do
    ```
    nuke generate
